@@ -1,7 +1,9 @@
 # -*- coding:utf-8 -*-
 
 import streamlit as st
+import joblib # 저장할 때 사용
 from eda_app import run_eda_app
+from ml_app import run_ml_app
 
 def main():
     
@@ -16,7 +18,7 @@ def main():
         # st.subheader('EDA')
         run_eda_app()
     elif choice == '머신러닝':
-        st.subheader('머신러닝')
+        run_ml_app()
     elif choice == 'About':
         st.subheader('About')
     else:
